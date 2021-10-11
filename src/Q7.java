@@ -22,7 +22,7 @@ Output: 0
  */
 
 
-class Q14 {
+class Q7 {
     public int reverse(int x) {
         int y=Math.abs(x);
         long sum=0;
@@ -43,11 +43,10 @@ class Q14 {
         else
             return 0;
     }
-//
 //    public static void main(String []args){
 //        Scanner sc = new Scanner(System.in);
 //        int n = sc.nextInt();
-//        Q14 obj = new Q14();
+//        Q7 obj = new Q7();
 //        System.out.println(obj.reverse(n));
 //    }
 }
