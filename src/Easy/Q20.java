@@ -1,3 +1,5 @@
+package Easy;
+
 class Solution {
     public boolean isValid(String s) {
        int len;
