@@ -1,3 +1,5 @@
+package Hard;
+
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
         s=set(nums)
