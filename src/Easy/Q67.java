@@ -1,3 +1,5 @@
+package Easy;
+
 class Solution {
     public String addBinary(String a, String b) {
         StringBuilder ans=new StringBuilder();
