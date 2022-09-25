@@ -1,3 +1,5 @@
+package Easy;
+
 class Solution {
     public int singleNumber(int[] nums) {
         int s=0;
