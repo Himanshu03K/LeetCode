@@ -1,20 +1,30 @@
 class Solution {
     public List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> triangle = new ArrayList<List<Integer>>();
-        if (numRows <=0){
-            return triangle;
+        List<List<Integer>> ans = new ArrayList<>();
+        
+        int r =1; 
+        while(r<=numRows){
+            List<Integer> test= new ArrayList<>();
+           for(int i=1;i<=r;i++){
+               
+                test.add(nCr(r-1,i-1));
+                
+               
+            } 
+            ans.add(test);
+            
+            r++;
         }
-        for (int i=0; i<numRows; i++){
-            List<Integer> row =  new ArrayList<Integer>();
-            for (int j=0; j<i+1; j++){
-                if (j==0 || j==i){
-                    row.add(1);
-                } else {
-                    row.add(triangle.get(i-1).get(j-1)+triangle.get(i-1).get(j));
-                }
-            }
-            triangle.add(row);
+        return ans;
+        
+    }
+    
+    public int nCr(int n,int r){
+        int  res =1;
+        for(int i=0;i<r;i++){
+            res=res*(n-i);
+            res=res/(i+1);
         }
-        return triangle;
+        return res;
     }
 }
